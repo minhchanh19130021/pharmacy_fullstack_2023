@@ -21,3 +21,8 @@ code {
     @apply font-roboto;
   }
 }
+
+:root {
+  --primary-color: #fff;
+  --secondary-color: #a71c1c;
+}

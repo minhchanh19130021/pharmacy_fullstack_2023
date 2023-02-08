@@ -9,8 +9,19 @@ function Footer() {
             setCollapseFirstColumn(false);
             setCollapseSecondColumn(false);
             setCollapseThirdColumn(false);
+        } else {
+            setCollapseFirstColumn(true);
+            setCollapseSecondColumn(true);
+            setCollapseThirdColumn(true);
         }
     };
+
+    useEffect(() => {
+        handleResize();
+    }, []);
+    useEffect(() => {
+        window.addEventListener('resize', handleResize);
+    });
 
     function createLink(text, link) {
         return (
@@ -20,15 +31,11 @@ function Footer() {
         );
     }
 
-    useEffect(() => {
-        window.addEventListener('resize', handleResize);
-    });
-
     return (
         <div>
-            <div className="flex flex-wrap justify-center">
-                <div className="flex flex-wrap mr-10">
-                    <div className="flex flex-col mr-10 max-sm:w-full">
+            <div className="flex flex-wrap justify-center px-2">
+                <div className="flex flex-wrap sm:mr-10">
+                    <div className="flex flex-col sm:mr-10 max-sm:w-full">
                         <div
                             className="flex justify-between items-center"
                             onClick={() =>
@@ -43,7 +50,7 @@ function Footer() {
                                 VỀ CHÚNG TÔI
                             </h6>
                             <span
-                                className={`max-sm:block hidden duration-500 ${
+                                className={`max-sm:block duration-500 ${
                                     collapseFirstColumn
                                         ? 'rotate-0'
                                         : 'rotate-180'
@@ -70,7 +77,7 @@ function Footer() {
                             {createLink('Tra cứu đơn hàng')}
                         </div>
                     </div>
-                    <div className="flex flex-col mr-10 max-sm:w-full">
+                    <div className="flex flex-col sm:mr-10 max-sm:w-full">
                         <div
                             className="flex justify-between items-center"
                             onClick={() =>
@@ -106,7 +113,7 @@ function Footer() {
                             {createLink('Góc sức khoẻ')}
                         </div>
                     </div>
-                    <div className="flex flex-col max-sm:w-full mr-10">
+                    <div className="flex flex-col max-sm:w-full sm:mr-10">
                         <div
                             className="flex justify-between items-center"
                             onClick={() =>
@@ -190,12 +197,12 @@ function Footer() {
                 </div>
             </div>
             <div>
-                <h6 className="text-center text-sm px-24 border-t-2 py-2 mt-5">
+                <h6 className="text-center text-sm sm:px-24 border-t-2 py-2 mt-5">
                     © 2000 - 3000 Công ty Cổ Phần Dược Phẩm NLU Nông Lâm Số ĐKKD
-                    0315275368 cấp ngày 06/02/2023 tại Sở Kế hoạch Đầu tư TPHCM
-                    Địa chỉ: Khu Phố 6, Thủ Đức, Thành phố Hồ Chí Minh. Số điện
-                    thoại: (028)78965423 - Email: sale@nhathuocnonglam.com -
-                    Người quản lý nội dung: Nguyễn Văn A
+                    0315275368 cấp ngày 06/02/2023 Địa chỉ: Khu Phố 6, Thủ Đức,
+                    Thành phố Hồ Chí Minh. Số điện thoại: (028)78965423 - Email:
+                    sale@nhathuocnonglam.com - Người quản lý nội dung: Nguyễn
+                    Văn A
                 </h6>
             </div>
         </div>

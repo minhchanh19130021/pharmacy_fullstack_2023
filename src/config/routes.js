@@ -1,8 +1,9 @@
 const routes = {
-  home: "/",
-  detail: "/detail",
-  // 404
-  not_found: "*",
-  // cart
+    home: '/',
+    detail: '/detail',
+    cart: '/cart',
+    // 404
+    not_found: '*',
+    // cart
 };
 export default routes;

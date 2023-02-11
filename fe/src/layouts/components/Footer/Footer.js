@@ -50,7 +50,7 @@ function Footer() {
                                 VỀ CHÚNG TÔI
                             </h6>
                             <span
-                                className={`max-sm:block duration-500 ${
+                                className={`max-sm:block hidden duration-500 ${
                                     collapseFirstColumn
                                         ? 'rotate-0'
                                         : 'rotate-180'

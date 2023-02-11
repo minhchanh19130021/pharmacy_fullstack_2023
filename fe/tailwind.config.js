@@ -6,7 +6,14 @@ module.exports = {
             fontFamily: {
                 roboto: ['Roboto', 'sans-serif'],
             },
+            margin: {
+                '16.66667%': '16.66667%',
+            },
+            screens: {
+                'xs': '320px',
+               
+            },
         },
     },
-    plugins: [],
+    plugins: [require('@tailwindcss/line-clamp')],
 };

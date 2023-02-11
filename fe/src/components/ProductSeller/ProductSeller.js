@@ -1,8 +1,23 @@
 import { NavLink } from 'react-router-dom';
 
-function ProductSeller({ to, img, name, newPrice, unit, oldPrice }) {
+function ProductSeller({
+    to,
+    img,
+    name,
+    newPrice,
+    unit,
+    oldPrice,
+    backgroundColor,
+    px,
+    py,
+    borderRadius,
+}) {
     return (
-        <div className="product">
+        <div
+            className={`product ${
+                backgroundColor + ' ' + px + ' ' + py + ' ' + borderRadius
+            }`}
+        >
             <NavLink to={to || ''}>
                 <img
                     src={img}
@@ -10,7 +25,10 @@ function ProductSeller({ to, img, name, newPrice, unit, oldPrice }) {
                     className="px-2 py-2 bg-[#fff] rounded-md border-[#d8e0e8] border-2 w-[155px] h-[157px] object-cover hover:border-[#072d94]"
                 />
             </NavLink>
-            <NavLink to={to || ''} className="text-[#334155] line-clamp-2 text-base hover:text-[#072d94]">
+            <NavLink
+                to={to || ''}
+                className="text-[#334155] line-clamp-2 text-base hover:text-[#072d94]"
+            >
                 {name}
             </NavLink>
             <p className="price">

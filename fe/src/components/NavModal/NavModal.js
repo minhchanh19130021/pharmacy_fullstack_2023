@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 import ProductSeller from '../ProductSeller';
 import NavModalItem from './NavModalItem';
 
-function NavModal({children}) {
+function NavModal({ children }) {
     return (
         <div className="wrapper-navmodal flex flex-wrap shadow-lg ">
             <div className="w-3/12 bg-[#fff] ">
@@ -65,7 +65,9 @@ function NavModal({children}) {
                                     alt="navmodal-item-img"
                                 />
                             </picture>
-                            <p className="navmodal-item__title text-sm">Vi sinh - Probiotic</p>
+                            <p className="navmodal-item__title text-sm">
+                                Vi sinh - Probiotic
+                            </p>
                         </NavLink>
                     </div>
                     <div className="px-1 max-w-[25%] flex-[0_0_25%]">
@@ -79,7 +81,9 @@ function NavModal({children}) {
                                     alt="navmodal-item-img"
                                 />
                             </picture>
-                            <p className="navmodal-item__title text-sm">Vi sinh - Probiotic</p>
+                            <p className="navmodal-item__title text-sm">
+                                Vi sinh - Probiotic
+                            </p>
                         </NavLink>
                     </div>
                     <div className="px-1 max-w-[25%] flex-[0_0_25%]">
@@ -93,7 +97,9 @@ function NavModal({children}) {
                                     alt="navmodal-item-img"
                                 />
                             </picture>
-                            <p className="navmodal-item__title text-sm">Vi sinh - Probiotic</p>
+                            <p className="navmodal-item__title text-sm">
+                                Vi sinh - Probiotic
+                            </p>
                         </NavLink>
                     </div>
                     <div className="px-1 max-w-[25%] flex-[0_0_25%]">
@@ -107,7 +113,9 @@ function NavModal({children}) {
                                     alt="navmodal-item-img"
                                 />
                             </picture>
-                            <p className="navmodal-item__title text-sm">Vi sinh - Probiotic</p>
+                            <p className="navmodal-item__title text-sm">
+                                Vi sinh - Probiotic
+                            </p>
                         </NavLink>
                     </div>
                     <div className="px-1 max-w-[25%] flex-[0_0_25%]">
@@ -121,7 +129,9 @@ function NavModal({children}) {
                                     alt="navmodal-item-img"
                                 />
                             </picture>
-                            <p className="navmodal-item__title text-sm">Vi sinh - Probiotic</p>
+                            <p className="navmodal-item__title text-sm">
+                                Vi sinh - Probiotic
+                            </p>
                         </NavLink>
                     </div>
                 </div>

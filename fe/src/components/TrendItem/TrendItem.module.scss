@@ -1,0 +1,24 @@
+.blue {
+    // class01 = 'flex items-center flex-col bg-[#e8f5fd] rounded-lg px-3 py-3 w-[176px] h-[204px] mb-4',
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: #e8f5fd;
+    border-radius: 12px;
+    padding: 12px;
+    width: 176px;
+    height: 204px;
+    margin-bottom: 16px;
+}
+
+.orange {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: #fef7dc;
+    border-radius: 12px;
+    padding: 12px;
+    width: 176px;
+    height: 204px;
+    margin-bottom: 16px;
+}

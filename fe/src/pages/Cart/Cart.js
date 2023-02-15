@@ -3,6 +3,8 @@ import { useState } from 'react';
 import CartItem from './CartItem';
 import Slider from 'react-slick';
 import ProductSeller from '~/components/ProductSeller';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 function Cart() {
     const [showModal, setShowModal] = useState(false);
@@ -51,7 +53,7 @@ function Cart() {
                     display: 'absolute',
                     backgroundColor: '#003366',
                     color: 'blue',
-                    right: '1%',
+                    right: '-2%',
                     borderRadius: '100%',
                     border: 'none',
                     paddingTop: '1px',
@@ -83,10 +85,10 @@ function Cart() {
     };
 
     return (
-        <div className="bg-[rgb(237,240,243)]">
+        <div className="bg-[rgb(237,240,243)] py-5">
             <div className="w-full sm:flex flex-wrap justify-evenly max-sm:justify-start ">
                 {/* <CartEmpty></CartEmpty> */}
-                <div className="px-1 py-3 rounded-xl">
+                <div className="px-1 pb-3 rounded-xl">
                     <div className="bg-white sm:mr-3 px-3 rounded-xl ">
                         <div>
                             <div className="flex items-center">
@@ -128,7 +130,7 @@ function Cart() {
                         <Slider {...settings} className="m-0 p-0 relative">
                             {Array.from({ length: 6 }, (v, i) => (
                                 <div key={i} className="">
-                                    <div className="max-sm:px-1 sm:pr-5 py-5">
+                                    <div className="max-sm:px-1 sm:px-3 py-5">
                                         <ProductSeller
                                             img="https://cdn.nhathuoclongchau.com.vn/unsafe/fit-in/600x600/filters:quality(90):fill(white)/nhathuoclongchau.com.vn/images/product/2022/06/00500184-sua-nutren-junior-nestle-health-science-hop-850g-2256-62a8_large.jpg"
                                             name="Sữa bột Nestlé Nutren Junior hỗ trợ hệ tiêu hóa giúp trẻ hấp thu dinh dưỡng (850g)"
@@ -136,8 +138,8 @@ function Cart() {
                                             unit="Hộp"
                                             oldPrice=""
                                             backgroundColor="bg-white"
-                                            py="sm:py-4 max-sm:py-2"
-                                            px="sm:px-5 max-sm:px-2"
+                                            py="sm:py-5 max-sm:py-4"
+                                            px="max-sm:px-2 sm:px-5"
                                             borderRadius="rounded-xl"
                                         />
                                     </div>
@@ -147,7 +149,7 @@ function Cart() {
                     </div>
                 </div>
                 <div className="sticky h-fit top-0 flex">
-                    <div className="z-10 w-72 bottom-0 bg-white border-2 h-fit py-4 px-3 sm:rounded-3xl max-sm:rounded-t-3xl max-sm:w-screen max-sm:fixed">
+                    <div className="z-10 w-72 bottom-0 bg-white h-fit py-4 px-3 sm:rounded-3xl max-sm:rounded-t-3xl max-sm:w-screen max-sm:fixed">
                         <div
                             className={`${
                                 showModal ? 'block' : 'hidden'

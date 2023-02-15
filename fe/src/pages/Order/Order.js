@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { useFormik, Field, Formik, Form } from 'formik';
-import * as Yup from 'yup';
 import OrderItem from './OrderItem';
 import address from '~/data/data';
 

@@ -18,7 +18,7 @@ function ProductSeller({
                 backgroundColor + ' ' + px + ' ' + py + ' ' + borderRadius
             }`}
         >
-            <NavLink to={to || ''}>
+            <NavLink to={to || ''} className="flex justify-center">
                 <img
                     src={img}
                     alt="product-img"

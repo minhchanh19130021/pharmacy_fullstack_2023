@@ -7,6 +7,7 @@ const routes = {
     signUp: '/signUp',
     confirmEmail: '/confirmEmail',
     forgotPassword: '/forgotPassword',
+    filter: '/filter',
     not_found: '*',
 };
 export default routes;

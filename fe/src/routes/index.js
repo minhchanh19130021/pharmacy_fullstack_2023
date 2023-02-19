@@ -7,6 +7,7 @@ import { SignIn } from '~/pages/SignIn';
 import { SignUp } from '~/pages/SignUp';
 import { ConfirmEmail } from '~/pages/ConfirmEmail';
 import { ForgotPassword } from '~/pages/ForgotPassword';
+import Filter from '~/pages/Filter';
 
 const publicRoutes = [
     {
@@ -20,6 +21,8 @@ const publicRoutes = [
     { path: config.routes.signUp, component: SignUp },
     { path: config.routes.confirmEmail, component: ConfirmEmail },
     { path: config.routes.forgotPassword, component: ForgotPassword },
+    { path: config.routes.filter, component: Filter },
+
 ];
 const privateRoutes = [];
 export { publicRoutes, privateRoutes };

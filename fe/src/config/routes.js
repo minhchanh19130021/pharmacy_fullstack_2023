@@ -8,6 +8,7 @@ const routes = {
     confirmEmail: '/confirmEmail',
     forgotPassword: '/forgotPassword',
     filter: '/filter',
-    not_found: '*',
+    serverError: 'server_error',
+    notFound: '*',
 };
 export default routes;

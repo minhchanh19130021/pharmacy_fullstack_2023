@@ -149,7 +149,7 @@ function Cart() {
                     </div>
                 </div>
                 <div className="sticky h-fit top-0 flex">
-                    <div className="z-10 w-72 bottom-0 bg-white h-fit py-4 px-3 sm:rounded-3xl max-sm:rounded-t-3xl max-sm:w-screen max-sm:fixed">
+                    <div className="z-10 w-72 border-2 bottom-0 bg-white h-fit py-4 px-3 sm:rounded-3xl max-sm:rounded-t-3xl max-sm:w-screen max-sm:fixed">
                         <div
                             className={`${
                                 showModal ? 'block' : 'hidden'

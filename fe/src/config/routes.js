@@ -8,6 +8,8 @@ const routes = {
     confirmEmail: '/confirmEmail',
     forgotPassword: '/forgotPassword',
     filter: '/filter',
+    user: '/user',
+    not_found: '*',
     serverError: 'server_error',
     notFound: '*',
 };

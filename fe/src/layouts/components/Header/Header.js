@@ -58,7 +58,7 @@ function Header() {
                 </div>
             </div>
 
-            <div className="2xl:hidden xl:hidden lg:hidden md:flex sm:flex xs:flex justify-between items-center px-1 h-20 relative">
+            <div className="2xl:hidden xl:hidden lg:hidden md:flex sm:flex xs:flex justify-between items-center 2xl:px-1 xl:px-1 lg:px-2 md:px-2 sm:px-3 xs:px-3 h-20 relative">
                 <div className="cursor-pointer">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"

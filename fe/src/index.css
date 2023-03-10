@@ -16,6 +16,7 @@ code {
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
+
 @layer base {
   body {
     @apply font-roboto;
@@ -29,6 +30,46 @@ code {
 }
 
 body {
-  min-width: 365px;
+  min-width: 150px;
 }
 
+@layer components {
+  .padding-responsive {
+    @apply 2xl:px-1 xl:px-1 lg:px-2 md:px-2 sm:px-4 xs:px-4 cs:px-4;
+  }
+
+  .transition-basic {
+    @apply transition ease-in-out delay-75;
+  }
+
+  .customeR1 {
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+  }
+
+  .shadow-input {
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+  }
+
+  .shadow-button {
+    box-shadow: rgba(54, 90, 190, 0.705) 0px 10px 50px;
+  }
+
+  .shadow-text-login {
+    text-shadow: -15px 5px 20px rgb(56, 189, 248);
+  }
+
+  .bg-45deg-blue {
+    background: linear-gradient(45deg, #4481eb, #04befe);
+    border-radius: 100% 0% 8% 92% / 0% 100% 0% 100%
+  }
+
+  .bg-banner {
+    background-color: #FAACA8;
+    background-image: linear-gradient(19deg, #FAACA8 0%, #DDD6F3 100%);
+    
+
+  }
+
+
+
+}

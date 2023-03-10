@@ -13,7 +13,7 @@ function AddressItem({ name, phone, address }) {
                 </div>
             </div>
             <div className="flex items-center mx-auto my-0">
-                <button className="px-5 leading-8 border border-[#d8e0e8] bg-transparent rounded-2xl font-medium hover:text-[#fff] hover:bg-[#718198] hover:border-[#718198]">
+                <button className="px-5 leading-8 border border-[#d8e0e8] bg-transparent rounded-2xl font-bold hover:text-[#fff] hover:bg-[#718198] hover:border-[#718198] hover:transition-basic">
                     Chỉnh sửa
                 </button>
             </div>

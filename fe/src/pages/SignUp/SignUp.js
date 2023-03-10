@@ -2,6 +2,8 @@ import { useFormik, Formik, Form } from 'formik';
 import { useState } from 'react';
 import * as Yup from 'yup';
 import { NavLink } from 'react-router-dom';
+import { Animation } from 'react-animate-style';
+import Slider from 'react-slick';
 
 function SignUp() {
     const [showPassword, setShowPassword] = useState(false);
@@ -14,102 +16,99 @@ function SignUp() {
             confirmPassword: '',
         },
         validationSchema: Yup.object({
-            name: Yup.string()
-                .required('Yêu cầu đặt tên người dùng')
-                .min(4, 'Tên quá ngắn')
-                .max(16, 'Tên quá dài'),
-            email: Yup.string()
-                .email('Email không hợp lệ')
-                .required('Yêu cầu email'),
-            password: Yup.string()
-                .required('Yêu cầu mật khẩu')
-                .min(8, 'Mật khẩu quá ngắn')
-                .max(16, 'Mật khẩu quá dài'),
+            name: Yup.string().required('Yêu cầu đặt tên người dùng').min(4, 'Tên quá ngắn').max(16, 'Tên quá dài'),
+            email: Yup.string().email('Email không hợp lệ').required('Yêu cầu email'),
+            password: Yup.string().required('Yêu cầu mật khẩu').min(8, 'Mật khẩu quá ngắn').max(16, 'Mật khẩu quá dài'),
             confirmPassword: Yup.string()
                 .required('Yêu cầu xác nhận mật khẩu')
                 .oneOf([Yup.ref('password')], 'Xác nhận mật khẩu không đúng.'),
         }),
         onSubmit: (values) => {},
     });
+    const settings = {
+        dots: false,
+        infinite: true,
+        autoplay: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+
+    };
     return (
-        <div className="px-4 flex justify-center my-2">
-            <div className="border-2 sm:w-2/4 max-sm:w-full sm:my-10 p-8 rounded-xl">
-                <p className="text-2xl font-medium">Đăng ký</p>
-                <div>
-                    <Formik
-                        className="my-3"
-                        initialValues={formik.initialValues}
-                        onSubmit={formik.handleSubmit}
-                    >
+        <div className="max-w-full 2xl:bg-[#f5f5f5] xl:bg-[#f5f5f5] lg:bg-[#f5f5f5] md:bg-[#f5f5f5] sm::bg-[#fff] xs:bg-[#fff] cs:bg-[#fff] px-4 flex justify-center my-2 animate-fadeBottomMobile">
+            <div className="max-w-[1200px] mx-auto grid 2xl:grid-cols-2 xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 xs:grid-cols-1 cs:grid-cols-1 place-content-center gap-10 py-10">
+                <Animation
+                    animationIn="slideInLeft"
+                    isVisible
+                    className="sm:my-10 p-8 rounded-xl 2xl:bg-[#f5f5f5] xl:bg-[#f5f5f5] lg:bg-[#f5f5f5] md:bg-[#f5f5f5] sm::bg-[#fff] xs:bg-[#fff] cs:bg-[#fff]"
+                >
+                    <Formik initialValues={formik.initialValues} onSubmit={formik.handleSubmit}>
                         <Form className="my-3">
+                            <Animation animationIn="slideInLeft" isVisible>
+                                <h1 className="text-[#016cc9] font-bold 2xl:text-5xl xl:text-5xl lg:text-5xl md:text-5xl sm:text-3xl xs:text-2xl cs:text-xl shadow-text-login border-none ">
+                                    Đăng ký tài khoản <br /> mua sắm tại Pharmacy
+                                </h1>
+                            </Animation>
                             <div className="my-3">
+                                <label htmlFor="name" className="py-1 font-bold text-[#016cc9] ">
+                                    Họ và tên
+                                </label>
                                 <input
                                     autoComplete="off"
-                                    className=" outline-0 h-12 px-2 rounded-xl w-full border-b focus:border-b-2 focus:border-sky-500"
+                                    className={
+                                        formik.touched.name && formik.errors.name
+                                            ? 'outline-none border border-[#ff4742] w-full h-12  px-4 py-1 focus:border-[#ff4742] rounded-lg bg-[#eaf0f7] focus:shadow-input transition-basic'
+                                            : 'outline-none border border-[#f5f5f5] w-full  h-12  px-4 py-1 focus:border-[#d6d0d0] rounded-lg bg-[#eaf0f7] focus:shadow-input transition-basic'
+                                    }
                                     placeholder="Tên của bạn"
                                     name="name"
+                                    id="name"
                                     onChange={formik.handleChange}
                                     value={formik.values.name}
                                 ></input>
                                 {formik.touched.name && formik.errors.name ? (
-                                    <span className="flex items-center mt-2 text-red-600 text-sm">
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            fill="none"
-                                            viewBox="0 0 24 24"
-                                            strokeWidth={1.5}
-                                            stroke="currentColor"
-                                            className="w-6 h-6"
-                                        >
-                                            <path
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                                d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z"
-                                            />
-                                        </svg>
-                                        <span className="mx-1">
-                                            {formik.errors.name}
-                                        </span>
-                                    </span>
+                                    <div className="flex items-center mt-2 text-red-600 text-sm font-bold">
+                                        <span className="mx-1">{formik.errors.name}</span>
+                                    </div>
                                 ) : null}
                             </div>
                             <div className="my-3">
+                                <label htmlFor="email" className="py-1 font-bold text-[#016cc9] ">
+                                    Địa chỉ email
+                                </label>
                                 <input
                                     autoComplete="off"
-                                    className=" outline-0 h-12 px-2 rounded-xl w-full border-b focus:border-b-2 focus:border-sky-500"
-                                    placeholder="Email của bạn"
+                                    className={
+                                        formik.touched.email && formik.errors.email
+                                            ? 'outline-none border border-[#ff4742] w-full h-12  px-4 py-1 focus:border-[#ff4742] rounded-lg bg-[#eaf0f7] focus:shadow-input transition-basic'
+                                            : 'outline-none border border-[#f5f5f5] w-full  h-12  px-4 py-1 focus:border-[#d6d0d0] rounded-lg bg-[#eaf0f7] focus:shadow-input transition-basic'
+                                    }
+                                    placeholder="Ví dụ: user@gmail.com"
                                     name="email"
+                                    id="email"
                                     onChange={formik.handleChange}
                                     value={formik.values.email}
                                 ></input>
                                 {formik.touched.email && formik.errors.email ? (
-                                    <span className="flex items-center mt-2 text-red-600 text-sm">
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            fill="none"
-                                            viewBox="0 0 24 24"
-                                            strokeWidth={1.5}
-                                            stroke="currentColor"
-                                            className="w-6 h-6"
-                                        >
-                                            <path
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                                d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z"
-                                            />
-                                        </svg>
-                                        <span className="mx-1">
-                                            {formik.errors.email}
-                                        </span>
-                                    </span>
+                                    <div className="flex items-center mt-2 text-red-600 text-sm font-bold">
+                                        <span className="mx-1">{formik.errors.email}</span>
+                                    </div>
                                 ) : null}
                             </div>
                             <div className="my-3 relative">
+                                <label htmlFor="password" className="py-1 font-bold text-[#016cc9] ">
+                                    Mật khẩu
+                                </label>
                                 <input
                                     autoComplete="off"
-                                    placeholder="Mật khẩu của bạn"
-                                    className="block h-12 outline-0 rounded-xl w-full border-b focus:border-b-2 focus:border-sky-500 duration-100 ease-in px-2 rounded-lg w-full"
+                                    placeholder="••••••••••"
+                                    className={
+                                        formik.touched.password && formik.errors.password
+                                            ? 'outline-none border border-[#ff4742] w-full h-12  px-4 py-1 focus:border-[#ff4742] rounded-lg bg-[#eaf0f7] focus:shadow-input transition-basic'
+                                            : 'outline-none border border-[#f5f5f5] w-full  h-12  px-4 py-1 focus:border-[#d6d0d0] rounded-lg bg-[#eaf0f7] focus:shadow-input transition-basic'
+                                    }
                                     name="password"
+                                    id="password"
                                     type={showPassword ? 'text' : 'password'}
                                     onChange={formik.handleChange}
                                     value={formik.values.password}
@@ -117,9 +116,7 @@ function SignUp() {
                                 {formik.values.password ? (
                                     <span
                                         className="text-zinc-600 absolute top-3 right-2 cursor-pointer"
-                                        onClick={() =>
-                                            setShowPassword(!showPassword)
-                                        }
+                                        onClick={() => setShowPassword(!showPassword)}
                                     >
                                         {showPassword ? (
                                             <svg
@@ -160,51 +157,34 @@ function SignUp() {
                                     </span>
                                 ) : null}
 
-                                {formik.touched.password &&
-                                formik.errors.password ? (
-                                    <span className="flex items-center mt-2 text-red-600 text-sm">
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            fill="none"
-                                            viewBox="0 0 24 24"
-                                            strokeWidth={1.5}
-                                            stroke="currentColor"
-                                            className="w-6 h-6"
-                                        >
-                                            <path
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                                d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z"
-                                            />
-                                        </svg>
-                                        <span className="mx-1">
-                                            {formik.errors.password}
-                                        </span>
-                                    </span>
+                                {formik.touched.password && formik.errors.password ? (
+                                    <div className="flex items-center mt-2 text-red-600 text-sm font-bold">
+                                        <span className="mx-1">{formik.errors.password}</span>
+                                    </div>
                                 ) : null}
                             </div>
                             <div className="my-3 relative">
+                                <label htmlFor="confirmPassword" className="py-1 font-bold text-[#016cc9] ">
+                                    Xác nhận mật khẩu
+                                </label>
                                 <input
                                     autoComplete="new-password"
-                                    placeholder="Xác nhận mật khẩu"
-                                    className="block h-12 outline-0 rounded-xl w-full border-b focus:border-b-2 focus:border-sky-500 duration-100 ease-in px-2 rounded-lg w-full"
-                                    name="confirmPassword"
-                                    type={
-                                        showConfirmPassword
-                                            ? 'text'
-                                            : 'password'
+                                    placeholder="••••••••••"
+                                    className={
+                                        formik.touched.confirmPassword && formik.errors.confirmPassword
+                                            ? 'outline-none border border-[#ff4742] w-full h-12  px-4 py-1 focus:border-[#ff4742] rounded-lg bg-[#eaf0f7] focus:shadow-input transition-basic'
+                                            : 'outline-none border border-[#f5f5f5] w-full  h-12  px-4 py-1 focus:border-[#d6d0d0] rounded-lg bg-[#eaf0f7] focus:shadow-input transition-basic'
                                     }
+                                    name="confirmPassword"
+                                    id="confirmPassword"
+                                    type={showConfirmPassword ? 'text' : 'password'}
                                     onChange={formik.handleChange}
                                     value={formik.values.confirmPassword}
                                 ></input>
                                 {formik.values.confirmPassword ? (
                                     <span
                                         className="text-zinc-600 absolute top-3 right-2 cursor-pointer"
-                                        onClick={() =>
-                                            setShowConfirmPassword(
-                                                !showConfirmPassword,
-                                            )
-                                        }
+                                        onClick={() => setShowConfirmPassword(!showConfirmPassword)}
                                     >
                                         {showConfirmPassword ? (
                                             <svg
@@ -245,43 +225,24 @@ function SignUp() {
                                     </span>
                                 ) : null}
 
-                                {formik.touched.confirmPassword &&
-                                formik.errors.confirmPassword ? (
-                                    <span className="flex items-center mt-2 text-red-600 text-sm">
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            fill="none"
-                                            viewBox="0 0 24 24"
-                                            strokeWidth={1.5}
-                                            stroke="currentColor"
-                                            className="w-6 h-6"
-                                        >
-                                            <path
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                                d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z"
-                                            />
-                                        </svg>
-                                        <span className="mx-1">
-                                            {formik.errors.confirmPassword}
-                                        </span>
-                                    </span>
+                                {formik.touched.confirmPassword && formik.errors.confirmPassword ? (
+                                    <div className="flex items-center mt-2 text-red-600 text-sm font-bold">
+                                        <span className="mx-1">{formik.errors.confirmPassword}</span>
+                                    </div>
                                 ) : null}
                             </div>
                             <button
                                 type="submit"
-                                className="w-full  my-3 px-2 py-3 bg-sky-400 hover:bg-sky-800 text-white text-xl rounded-xl"
+                                className="w-full h-12 my-3 bg-sky-400 hover:bg-sky-500 text-[#fff] font-bold text-base rounded-lg transition-basic select-none shadow-button"
                             >
-                                Đăng ký
+                                Đăng Ký
                             </button>
                         </Form>
                     </Formik>
+
                     <div className="text-lg">
-                        <span className="font-bold">Bạn đã có tài khoản </span>
-                        <NavLink
-                            to="/signIn"
-                            className="font-medium cursor-pointer text-blue-800"
-                        >
+                        <span className="font-bold">Bạn đã có tài khoản. </span>
+                        <NavLink to="/signIn" className="font-bold cursor-pointer text-blue-800">
                             Đăng nhập ngay
                         </NavLink>
                     </div>
@@ -290,23 +251,56 @@ function SignUp() {
                         <span className="mx-4">Hoặc</span>
                         <div className="border w-2/4"></div>
                     </div>
-                    <div className="flex justify-center">
+                    <div className="flex flex-wrap justify-center">
                         <img
                             className="cursor-pointer hover:border-4 border-sky-300 duration-300 hover:ease-in p-2 rounded-full"
                             width={58}
                             src="data:image/png;base64,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"
-                        ></img>
+                            alt=""
+                        />
+
                         <img
                             className="mx-4 cursor-pointer hover:border-4 border-sky-300 duration-300 hover:ease-in p-2 rounded-full"
                             width={58}
                             src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1200px-Facebook_Logo_%282019%29.png"
-                        ></img>
+                            alt=""
+                        />
                         <img
                             className="cursor-pointer hover:border-4 border-sky-300 duration-300 hover:ease-in p-2 rounded-full"
                             width={58}
                             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTE8ig7Ys914TypBbWofcsBDRQe9Ha2jIa2z4PEyPHVPw&s"
-                        ></img>
+                            alt=""
+                        />
                     </div>
+                </Animation>
+
+                <div className=" flex-col justify-between my-auto  relative rounded-xl 2xl:flex xl:flex lg:flex md:flex sm:hidden xs:hidden cs:hidden">
+                    <Animation animationIn="slideInRight" isVisible className="rounded-xl ">
+                        <Slider {...settings} className="rounded-xl">
+                            <div className="rounded-xl ">
+                                <img
+                                    src="https://img.freepik.com/free-photo/doctor-with-his-arms-crossed-white-background_1368-5790.jpg?w=2000"
+                                    alt="img"
+                                    className="object-center h-[700px] object-cover rounded-xl"
+                                />
+                            </div>
+
+                            <div className="rounded-xl">
+                                <img
+                                    src="https://images.everydayhealth.com/images/how-menopause-worsens-rheumatoid-arthritis-alt-1440x810.jpg?sfvrsn=b247f01d_1"
+                                    alt="img"
+                                    className="object-center h-[700px] object-cover rounded-xl"
+                                />
+                            </div>
+                            <div className="rounded-xl">
+                                <img
+                                    src="https://img.freepik.com/free-photo/portrait-smiling-young-woman-doctor-healthcare-medical-worker-pointing-fingers-left-showing-clini_1258-88433.jpg"
+                                    alt="img"
+                                    className="object-center h-[700px] object-cover rounded-xl"
+                                />
+                            </div>
+                        </Slider>
+                    </Animation>
                 </div>
             </div>
         </div>

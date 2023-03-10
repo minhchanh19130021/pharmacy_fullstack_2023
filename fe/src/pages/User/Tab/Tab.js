@@ -8,7 +8,7 @@ function Tab() {
     };
     return (
         <>
-            <ul className="grid 2xl:grid-cols-5 xl:grid-cols-5 lg:grid-cols-5 md:grid-cols-5  sm:grid-cols-1  xs:grid-cols-1  gap-4 border  border-[#d8e0e8] bg-[#edf2f8] px-1 py-1 rounded-2xl">
+            <ul className="grid 2xl:grid-cols-5 xl:grid-cols-5 lg:grid-cols-5 md:grid-cols-5  sm:grid-cols-1  xs:grid-cols-1 cs:grid-cols-1  gap-4 border  border-[#d8e0e8] bg-[#edf2f8] px-1 py-1 rounded-2xl">
                 <li
                     onClick={() => toggleTab(1)}
                     className={
@@ -61,25 +61,55 @@ function Tab() {
                 </li>
             </ul>
             <div className="tab-content">
-                <div className={toggleState === 1 ? 'flex flex-col justify-center items-center pt-16 pb-10' : 'hidden'}>
+                <div
+                    className={
+                        toggleState === 1
+                            ? 'flex flex-col justify-center items-center pt-16 pb-10 animate-fadeBottomMobile'
+                            : 'hidden'
+                    }
+                >
                     <img src="https://nhathuoclongchau.com.vn/frontend_v3/images/empty-chitiet.png" alt="non-order" />
-                    <p className="mt-4 font-medium text-base">Quý khách chưa có đơn hàng nào 1</p>
+                    <p className="mt-4 font-bold text-base">Quý khách chưa có đơn hàng nào 1</p>
                 </div>
-                <div className={toggleState === 2 ? 'flex flex-col justify-center items-center pt-16 pb-10' : 'hidden'}>
+                <div
+                    className={
+                        toggleState === 2
+                            ? 'flex flex-col justify-center items-center pt-16 pb-10 animate-fadeBottomMobile'
+                            : 'hidden'
+                    }
+                >
                     <img src="https://nhathuoclongchau.com.vn/frontend_v3/images/empty-chitiet.png" alt="non-order" />
-                    <p className="mt-4 font-medium text-base">Quý khách chưa có đơn hàng nào 2</p>
+                    <p className="mt-4 font-bold text-base">Quý khách chưa có đơn hàng nào 2</p>
                 </div>
-                <div className={toggleState === 3 ? 'flex flex-col justify-center items-center pt-16 pb-10' : 'hidden'}>
+                <div
+                    className={
+                        toggleState === 3
+                            ? 'flex flex-col justify-center items-center pt-16 pb-10 animate-fadeBottomMobile'
+                            : 'hidden'
+                    }
+                >
                     <img src="https://nhathuoclongchau.com.vn/frontend_v3/images/empty-chitiet.png" alt="non-order" />
-                    <p className="mt-4 font-medium text-base">Quý khách chưa có đơn hàng nào 3</p>
+                    <p className="mt-4 font-bold text-base">Quý khách chưa có đơn hàng nào 3</p>
                 </div>
-                <div className={toggleState === 4 ? 'flex flex-col justify-center items-center pt-16 pb-10' : 'hidden'}>
+                <div
+                    className={
+                        toggleState === 4
+                            ? 'flex flex-col justify-center items-center pt-16 pb-10 animate-fadeBottomMobile'
+                            : 'hidden'
+                    }
+                >
                     <img src="https://nhathuoclongchau.com.vn/frontend_v3/images/empty-chitiet.png" alt="non-order" />
-                    <p className="mt-4 font-medium text-base">Quý khách chưa có đơn hàng nào 4</p>
+                    <p className="mt-4 font-bold text-base">Quý khách chưa có đơn hàng nào 4</p>
                 </div>
-                <div className={toggleState === 5 ? 'flex flex-col justify-center items-center pt-16 pb-10' : 'hidden'}>
+                <div
+                    className={
+                        toggleState === 5
+                            ? 'flex flex-col justify-center items-center pt-16 pb-10 animate-fadeBottomMobile'
+                            : 'hidden'
+                    }
+                >
                     <img src="https://nhathuoclongchau.com.vn/frontend_v3/images/empty-chitiet.png" alt="non-order" />
-                    <p className="mt-4 font-medium text-base">Quý khách chưa có đơn hàng nào 5</p>
+                    <p className="mt-4 font-bold text-base">Quý khách chưa có đơn hàng nào 5</p>
                 </div>
             </div>
         </>

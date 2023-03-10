@@ -5,8 +5,8 @@ function Address() {
     const [showModal, setShowModal] = useState(false);
     return (
         <>
-            <h1 className="text-[#1e293b] text-[28px] mb-4 font-medium">Sổ Địa Chỉ Nhận Hàng</h1>
-            <div className="list-address border border-[#d8e0e8]  px-4 py-4 rounded-2xl">
+            <h1 className="text-[#1e293b] text-[28px] mb-4 font-bold">Sổ Địa Chỉ Nhận Hàng</h1>
+            <div className="list-address border border-[#d8e0e8]  px-4 py-4 rounded-2xl animate-fadeBottomMobile">
                 <AddressItem
                     name="Chánh "
                     phone="0327172479"

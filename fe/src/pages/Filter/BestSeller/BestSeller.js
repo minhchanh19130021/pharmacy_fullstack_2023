@@ -50,8 +50,8 @@ function BestSeller() {
         ],
     };
     return (
-        <div className="bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg px-4 py-4">
-            <div className='flex items-center '>
+        <div className="bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg px-4 py-4 mb-8">
+            <div className="flex items-center ">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -72,7 +72,7 @@ function BestSeller() {
                     />
                 </svg>
 
-                <h3 className="text-[#fff] font-medium text-[20px] select-none">Bán Chạy Nhất</h3>
+                <h3 className="text-[#fff] font-bold text-[20px] select-none">Bán Chạy Nhất</h3>
             </div>
             <Slider {...settings2}>
                 <div className=" px-1 ">

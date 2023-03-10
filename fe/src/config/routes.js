@@ -1,14 +1,14 @@
 const routes = {
-    home: '/',
+    home: '/', // đã kiểm tra
     detail: '/detail',
     cart: '/cart',
     order: '/order',
-    signIn: '/signIn',
-    signUp: '/signUp',
-    confirmEmail: '/confirmEmail',
-    forgotPassword: '/forgotPassword',
-    filter: '/filter',
-    user: '/user',
+    signIn: '/signIn', // đã kiểm tra
+    signUp: '/signUp', // đã kiểm tra
+    confirmEmail: '/confirmEmail', // đã kiểm tra
+    forgotPassword: '/forgotPassword', // đã kiểm tra
+    filter: '/filter', // đã kiểm tra
+    user: '/user', // đã kiểm tra
     not_found: '*',
     serverError: 'server_error',
     notFound: '*',

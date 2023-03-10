@@ -24,11 +24,7 @@ function Footer() {
     });
 
     function createLink(text, link) {
-        return (
-            <a className="text-xs leading-7 text-blue-800/100 cursor-pointer">
-                {text}
-            </a>
-        );
+        return <a className="text-xs leading-7 text-blue-800/100 cursor-pointer">{text}</a>;
     }
 
     return (
@@ -39,31 +35,19 @@ function Footer() {
                         <div
                             className="flex justify-between items-center"
                             onClick={() =>
-                                window.innerWidth < 640
-                                    ? setCollapseFirstColumn(
-                                          !collapseFirstColumn,
-                                      )
-                                    : null
+                                window.innerWidth < 640 ? setCollapseFirstColumn(!collapseFirstColumn) : null
                             }
                         >
-                            <h6 className="text-xs font-medium">
-                                VỀ CHÚNG TÔI
-                            </h6>
+                            <h6 className="text-xs font-bold">VỀ CHÚNG TÔI</h6>
                             <span
                                 className={`max-sm:block hidden duration-500 ${
-                                    collapseFirstColumn
-                                        ? 'rotate-0'
-                                        : 'rotate-180'
+                                    collapseFirstColumn ? 'rotate-0' : 'rotate-180'
                                 }`}
                             >
                                 <i className="fa-solid fa-chevron-down"></i>
                             </span>
                         </div>
-                        <div
-                            className={`flex flex-col ${
-                                collapseFirstColumn ? 'hidden' : 'block'
-                            }`}
-                        >
+                        <div className={`flex flex-col ${collapseFirstColumn ? 'hidden' : 'block'}`}>
                             {createLink('Giới thiệu')}
                             {createLink('Hệ thống cửa hàng')}
                             {createLink('Giấy phép kinh doanh')}
@@ -81,29 +65,19 @@ function Footer() {
                         <div
                             className="flex justify-between items-center"
                             onClick={() =>
-                                window.innerWidth < 640
-                                    ? setCollapseSecondColumn(
-                                          !collapseSecondColumn,
-                                      )
-                                    : null
+                                window.innerWidth < 640 ? setCollapseSecondColumn(!collapseSecondColumn) : null
                             }
                         >
-                            <h6 className="text-xs font-medium">DANH MỤC</h6>
+                            <h6 className="text-xs font-bold">DANH MỤC</h6>
                             <span
                                 className={`max-sm:block hidden duration-500 ${
-                                    collapseSecondColumn
-                                        ? 'rotate-0'
-                                        : 'rotate-180'
+                                    collapseSecondColumn ? 'rotate-0' : 'rotate-180'
                                 }`}
                             >
                                 <i className="fa-solid fa-chevron-down"></i>
                             </span>
                         </div>
-                        <div
-                            className={`flex flex-col ${
-                                collapseSecondColumn ? 'hidden' : 'block'
-                            }`}
-                        >
+                        <div className={`flex flex-col ${collapseSecondColumn ? 'hidden' : 'block'}`}>
                             {createLink('Thực phẩm chức năng')}
                             {createLink('Dược mỹ phẩm')}
                             {createLink('Chăm sóc cá nhân')}
@@ -117,31 +91,19 @@ function Footer() {
                         <div
                             className="flex justify-between items-center"
                             onClick={() =>
-                                window.innerWidth < 640
-                                    ? setCollapseThirdColumn(
-                                          !collapseThirdColumn,
-                                      )
-                                    : null
+                                window.innerWidth < 640 ? setCollapseThirdColumn(!collapseThirdColumn) : null
                             }
                         >
-                            <h6 className="text-xs font-medium">
-                                THỰC PHẨM CHỨC NĂNG
-                            </h6>
+                            <h6 className="text-xs font-bold">THỰC PHẨM CHỨC NĂNG</h6>
                             <span
                                 className={`max-sm:block hidden duration-500 ${
-                                    collapseThirdColumn
-                                        ? 'rotate-0'
-                                        : 'rotate-180'
+                                    collapseThirdColumn ? 'rotate-0' : 'rotate-180'
                                 }`}
                             >
                                 <i className="fa-solid fa-chevron-down"></i>
                             </span>
                         </div>
-                        <div
-                            className={`flex flex-col ${
-                                collapseThirdColumn ? 'hidden' : 'block'
-                            }`}
-                        >
+                        <div className={`flex flex-col ${collapseThirdColumn ? 'hidden' : 'block'}`}>
                             {createLink('Sinh lý - Nội tiết tố')}
                             {createLink('Sức khỏe tim mạch')}
                             {createLink('Hỗ trợ điều trị')}
@@ -157,32 +119,18 @@ function Footer() {
                 <div className="max-sm:mt-5">
                     <div className="flex flex-wrap">
                         <div className="mr-5">
-                            <h6 className="text-xs">
-                                Tư vấn mua hàng (Miễn Phí)
-                            </h6>
-                            <span className="text-xl text-blue-900 font-medium">
-                                1800 8296
-                            </span>
-                            <span className="text-sm text-blue-900 font-medium">
-                                - Nhánh 1
-                            </span>
+                            <h6 className="text-xs">Tư vấn mua hàng (Miễn Phí)</h6>
+                            <span className="text-xl text-blue-900 font-bold">1800 8296</span>
+                            <span className="text-sm text-blue-900 font-bold">- Nhánh 1</span>
                         </div>
                         <div>
-                            <h6 className="text-xs">
-                                Góp ý, khiếu nại (8h00-22h00)
-                            </h6>
-                            <span className="text-xl text-blue-900 font-medium">
-                                1800 8296
-                            </span>
-                            <span className="text-sm text-blue-900 font-medium">
-                                - Nhánh 2
-                            </span>
+                            <h6 className="text-xs">Góp ý, khiếu nại (8h00-22h00)</h6>
+                            <span className="text-xl text-blue-900 font-bold">1800 8296</span>
+                            <span className="text-sm text-blue-900 font-bold">- Nhánh 2</span>
                         </div>
                     </div>
                     <div className="flex items-center justify-end mt-5">
-                        <h6 className="text-xs font-medium">
-                            KẾT NỐI VỚI CHÚNG TÔI
-                        </h6>
+                        <h6 className="text-xs font-bold">KẾT NỐI VỚI CHÚNG TÔI</h6>
                         <img
                             className="mx-2 cursor-pointer"
                             width={20}
@@ -198,11 +146,9 @@ function Footer() {
             </div>
             <div>
                 <h6 className="text-center text-sm sm:px-24 border-t-2 py-2 mt-5">
-                    © 2000 - 3000 Công ty Cổ Phần Dược Phẩm NLU Nông Lâm Số ĐKKD
-                    0315275368 cấp ngày 06/02/2023 Địa chỉ: Khu Phố 6, Thủ Đức,
-                    Thành phố Hồ Chí Minh. Số điện thoại: (028)78965423 - Email:
-                    sale@nhathuocnonglam.com - Người quản lý nội dung: Nguyễn
-                    Văn A
+                    © 2000 - 3000 Công ty Cổ Phần Dược Phẩm NLU Nông Lâm Số ĐKKD 0315275368 cấp ngày 06/02/2023 Địa chỉ:
+                    Khu Phố 6, Thủ Đức, Thành phố Hồ Chí Minh. Số điện thoại: (028)78965423 - Email:
+                    sale@nhathuocnonglam.com - Người quản lý nội dung: Nguyễn Văn A
                 </h6>
             </div>
         </div>

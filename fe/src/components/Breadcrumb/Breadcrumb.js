@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 
 function Breadcrumb() {
     return (
-        <div className="breadcrumb pb-4 pt-3 ">
+        <div className="breadcrumb pb-4 pt-3 padding-responsive">
             <NavLink to="" className="text-sm text-[#1d48ba]">
                 Trang chủ
             </NavLink>

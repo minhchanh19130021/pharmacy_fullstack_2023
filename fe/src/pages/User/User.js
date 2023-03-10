@@ -5,25 +5,25 @@ import PasswordUser from './PasswordUser';
 import Tab from './Tab';
 
 function User() {
-    const [toggleState, setToggleState] = useState(2);
+    const [toggleState, setToggleState] = useState(1);
 
     const toggleTab = (index) => {
         setToggleState(index);
     };
     return (
         <div className="max-w-full">
-            <img src="https://nhathuoclongchau.com.vn/frontend_v3/images/banner-html/banner-QLTK.png" alt="banner" />
+            <img src="https://nhathuoclongchau.com.vn/frontend_v3/images/banner-html/banner-QLTK.png" alt="banner" className='h-[264px] object-cover'/>
             <div className="max-w-[1200px] mx-auto my-0">
-                <div className="grid 2xl:grid-cols-4 xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-1 gap-4 2xl:px-1 xl:px-1 lg:px-1 md:px-2 sm:px-2 xs:px-3">
-                    <div className="2xl:col-span-1 xl:col-span-1 lg:col-span-1 xs:col-span-1">
+                <div className="grid 2xl:grid-cols-4 xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-1 gap-4 padding-responsive">
+                    <div className="2xl:col-span-1 xl:col-span-1 lg:col-span-1 xs:col-span-1 cs:col-span-1">
                         <InfoUpdate />
-                        <div className="flex flex-col mt-[52px] ">
+                        <div className="flex flex-col mt-[52px]">
                             <div
                                 onClick={() => toggleTab(1)}
                                 className={
                                     toggleState === 1
-                                        ? 'flex items-center bg-[#edf2f8] border border-transparent hover:border-[#072d94] rounded-lg mb-3 px-2 py-2 cursor-pointer '
-                                        : 'flex items-center bg-transparent border border-transparent hover:border-[#072d94] rounded-lg mb-3 px-2 py-2 cursor-pointer'
+                                        ? 'flex items-center bg-[#edf2f8] border border-transparent hover:border-[#072d94] rounded-lg mb-3 px-2 py-2 cursor-pointer transition-basic '
+                                        : 'flex items-center bg-transparent border border-transparent hover:border-[#072d94] rounded-lg mb-3 px-2 py-2 cursor-pointer transition-basic'
                                 }
                             >
                                 <svg
@@ -49,8 +49,8 @@ function User() {
                                 onClick={() => toggleTab(2)}
                                 className={
                                     toggleState === 2
-                                        ? 'flex items-center bg-[#edf2f8] border border-transparent hover:border-[#072d94] rounded-lg mb-3 px-2 py-2 cursor-pointer '
-                                        : 'flex items-center bg-transparent border border-transparent hover:border-[#072d94] rounded-lg mb-3 px-2 py-2 cursor-pointer'
+                                        ? 'flex items-center bg-[#edf2f8] border border-transparent hover:border-[#072d94] rounded-lg mb-3 px-2 py-2 cursor-pointer transition-basic '
+                                        : 'flex items-center bg-transparent border border-transparent hover:border-[#072d94] rounded-lg mb-3 px-2 py-2 cursor-pointer transition-basic'
                                 }
                             >
                                 <svg
@@ -76,8 +76,8 @@ function User() {
                                 onClick={() => toggleTab(3)}
                                 className={
                                     toggleState === 3
-                                        ? 'flex items-center bg-[#edf2f8] border border-transparent hover:border-[#072d94] rounded-lg mb-3 px-2 py-2 cursor-pointer '
-                                        : 'flex items-center bg-transparent border border-transparent hover:border-[#072d94] rounded-lg mb-3 px-2 py-2 cursor-pointer'
+                                        ? 'flex items-center bg-[#edf2f8] border border-transparent hover:border-[#072d94] rounded-lg mb-3 px-2 py-2 cursor-pointer hover:transition-basic'
+                                        : 'flex items-center bg-transparent border border-transparent hover:border-[#072d94] rounded-lg mb-3 px-2 py-2 cursor-pointer hover:transition-basic'
                                 }
                             >
                                 <svg

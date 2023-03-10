@@ -1,7 +1,7 @@
 function FilterItem({ title, children }) {
     return (
         <div className="filter-item mb-3">
-            <p className="font-medium text-base">{title}</p>
+            <p className="font-bold text-base">{title}</p>
             <div className="rounded-lg border-[#dee5eb] border flex items-center hover:border-[#333] mb-2">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -18,10 +18,9 @@ function FilterItem({ title, children }) {
                     />
                 </svg>
 
-                <input placeholder="Tìm theo tên" className="outline-none border-none text-sm h-[26px]" />
+                <input placeholder="Tìm theo tên" className="outline-none border-none text-sm h-[26px] w-10/12" />
             </div>
             {children}
-            
         </div>
     );
 }

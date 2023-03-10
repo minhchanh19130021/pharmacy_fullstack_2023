@@ -8,7 +8,7 @@ function Comment() {
         <div className="comment bg-[#edf2f8] max-w-full pb-8 px-1 ">
             <div className="max-w-[1200px]  mx-auto my-0 border rounded-3xl ">
                 <div className="comment-header px-3 py-4 bg-[#fff] border-[#d1d5da] rounded-t-lg">
-                    <h3 className="font-medium text-[20px]">Bình luận</h3>
+                    <h3 className="font-bold text-[20px]">Bình luận</h3>
                 </div>
                 <div className="comment-form px-4 py-1 mx-4 my-4 h-[90px] bg-[#fff] border-[#d8e0e8] border  rounded-lg relative mb-4">
                     <textarea
@@ -68,7 +68,7 @@ function Comment() {
                                     >
                                         <div className="bg-[#fff] px-4 py-4 rounded-2xl shadow-xl min-w-[400px]">
                                             <div className="flex items-center justify-between py-2 ">
-                                                <h3 className="font-medium text-2xl">Trả Lời "Thủy"</h3>
+                                                <h3 className="font-bold text-2xl">Trả Lời "Thủy"</h3>
                                                 <button onClick={() => setIsOpen(false)}>
                                                     <svg
                                                         xmlns="http://www.w3.org/2000/svg"
@@ -257,7 +257,7 @@ function Comment() {
                     </Reply>
 
                     <button class="flex items-center justify-center rounded-lg border border-[#d8e0e8] w-[192px] mx-auto mt-8 hover:text-[#fff] hover:bg-[#777272] h-8">
-                        <p className="mr-1 font-medium"> Xem thêm bình luận</p>
+                        <p className="mr-1 font-bold"> Xem thêm bình luận</p>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none"

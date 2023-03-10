@@ -12,8 +12,8 @@ function ResultSearchItem({ to, img, name, title, oldPrice, newPrice, unit }) {
                 className="w-[64px] h-[64px] object-cover mr-2"
             />
             <div className="result-item__info">
-                <p className="text-sm text-[#334155]">{name}</p>
-                <span className="px-2 bg-[#edf2f8] text-[#334155] rounded-sm text-sm h-6 mt-1">
+                <p className="text-sm text-[#334155] line-clamp-2">{name}</p>
+                <span className="px-2 bg-[#edf2f8] text-[#334155] rounded-sm text-sm h-6 mt-1 ">
                     {title}
                 </span>
                 <div className="price">

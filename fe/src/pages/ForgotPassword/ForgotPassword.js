@@ -31,8 +31,8 @@ function ForgotPassword() {
         },
     });
     return (
-        <div className="py-5 px-2">
-            <div className="grid place-content-center text-center border-4 border-sky-200 rounded-3xl sm:m-5 px-5 py-8">
+        <div className="max-w-[1200px] mx-auto padding-responsive overflow-hidden bg-[#fff]">
+            <div className="grid place-content-center text-center border-4 border-sky-200 rounded-3xl my-4 py-8">
                 <div className="p4-8 px-16">
                     <span className="flex justify-center">
                         <svg
@@ -89,7 +89,7 @@ function ForgotPassword() {
                                 }, 1500);
                             }}
                             placeholder="Nhập mã xác nhận"
-                            className="cursor-pointer text-center outline-0 bg-blue-100 hover:bg-sky-200 ring ring-2 my-8 py-2 px-8 rounded-xl border"
+                            className="cursor-pointer text-center outline-0 bg-blue-100 hover:bg-sky-200  ring-2 my-8 py-2 px-8 rounded-xl border w-6/12"
                         ></input>
                     )}
                 </div>
@@ -103,7 +103,7 @@ function ForgotPassword() {
                                 <input
                                     autoComplete="off"
                                     placeholder="Mật khẩu của bạn"
-                                    className="block h-12 outline-0 rounded-xl w-full border-b focus:border-b-2 focus:border-sky-500 duration-100 ease-in px-2 rounded-lg w-full"
+                                    className="block h-12 outline-0 rounded-xl w-full border-b focus:border-b-2 focus:border-sky-500 duration-100 ease-in px-2"
                                     name="password"
                                     type={showPassword ? 'text' : 'password'}
                                     onChange={formik.handleChange}
@@ -182,7 +182,7 @@ function ForgotPassword() {
                                 <input
                                     autoComplete="new-password"
                                     placeholder="Xác nhận mật khẩu"
-                                    className="block h-12 outline-0 rounded-xl w-full border-b focus:border-b-2 focus:border-sky-500 duration-100 ease-in px-2 rounded-lg w-full"
+                                    className="block h-12 outline-0 rounded-xl w-full border-b focus:border-b-2 focus:border-sky-500 duration-100 ease-in px-2 "
                                     name="confirmPassword"
                                     type={
                                         showConfirmPassword

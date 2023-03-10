@@ -9,41 +9,38 @@ function CartItem(props) {
     }, [props.checkAll]);
 
     return (
-        <div className="border-t flex items-center my-3 py-3">
+        <div className="border-t flex items-center  py-3 px-3 hover:bg-[#f5f5f5] transition-all">
             <div className="flex mr-1">
                 <div className="flex items-center text-sm my-3">
                     <span
                         onClick={() => setCheck(!check)}
                         className={`rounded-full p-1 mr-3 w-5 h-5 flex items-center justify-center text-white cursor-pointer ${
-                            check
-                                ? 'bg-sky-700 border border-sky-700'
-                                : 'border border-black'
+                            check ? 'bg-sky-700 border border-sky-700' : 'border border-black'
                         }`}
                     >
                         {check ? <i className="fa-solid fa-check"></i> : null}
                     </span>
                 </div>
                 <div className="border border-gray-100 p-1 rounded-md mr-2 max-w-sm	 w-12 h-fit">
-                    <img src="https://cdn.nhathuoclongchau.com.vn/unsafe/fit-in/600x600/filters:quality(90):fill(white)/nhathuoclongchau.com.vn/images/product/2023/01/00005713-panadol-extra-do-500mg-180v-sanofi-3541-63d7_large.jpg"></img>
+                    <img
+                        src="https://cdn.nhathuoclongchau.com.vn/unsafe/fit-in/600x600/filters:quality(90):fill(white)/nhathuoclongchau.com.vn/images/product/2023/01/00005713-panadol-extra-do-500mg-180v-sanofi-3541-63d7_large.jpg"
+                        alt=""
+                    />
                 </div>
             </div>
             <div className="flex flex-wrap items-center">
                 <div className="flex flex-wrap items-center justify-between">
                     <span className="text-xs w-56 sm:mr-10">
-                        Thuốc Panadol Exdiva đỏ GSK giúp giảm đau, hạ sốt (15 vỉ
-                        x 12 viên)
+                        Thuốc Panadol Exdiva đỏ GSK giúp giảm đau, hạ sốt (15 vỉ x 12 viên)
                     </span>
-                    <span className="text-blue-900 text-base font-medium w-24 my-2">
-                        6.400đ
-                    </span>
+                    <span className="text-blue-900 text-base font-bold w-24 my-2">6.400đ</span>
                 </div>
                 <div className="flex justify-between max-sm:justify-start w-44">
                     <div className="text-center p-0 mr-2">
                         <button
                             className="border px-1 rounded-l-full text-sm text-gray-500 cursor-pointer"
                             onClick={() => {
-                                if (quantity > 1)
-                                    setQuantity(Number(quantity) - 1);
+                                if (quantity > 1) setQuantity(Number(quantity) - 1);
                             }}
                         >
                             <i className="fa-solid fa-minus"></i>
@@ -66,10 +63,7 @@ function CartItem(props) {
                         </button>
                     </div>
                     <div className="px-2 py-1 w-16 rounded-full  border text-sm cursor-pointer relative">
-                        <div
-                            className="flex justify-between items-center"
-                            onClick={() => setShowUnit(!showUnit)}
-                        >
+                        <div className="flex justify-between items-center" onClick={() => setShowUnit(!showUnit)}>
                             <span className="text-xs">Hộp</span>
                             <span>
                                 <svg

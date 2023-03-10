@@ -1,7 +1,7 @@
 function ReviewItem({ avatar, name, time, content, children }) {
     return (
         <div className="review-item flex">
-            <p className="w-12 h-12 bg-[#a39c9c] text-[#fff] rounded-full flex items-center justify-center mr-2">
+            <p className="w-12 h-12  bg-[#a39c9c] text-[#fff] rounded-full flex items-center justify-center mr-2">
                 {avatar}
             </p>
             <div className="flex flex-col">
@@ -9,7 +9,7 @@ function ReviewItem({ avatar, name, time, content, children }) {
                     <span className="mr-4">{name}</span>
                     <span>{time}</span>
                 </div>
-                <div className="flex items-center">
+                <div className="flex items-center ">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24"

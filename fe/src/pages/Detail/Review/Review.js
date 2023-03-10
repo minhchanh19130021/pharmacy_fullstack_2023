@@ -6,12 +6,12 @@ function Review() {
         <div className="max-w-full bg-[#edf2f8] pb-8 px-1">
             <div className="max-w-[1200px] mx-auto my-0 bg-[#fff] rounded-xl border border-[#d8e0e8]">
                 <div className="px-4 py-3 border-b border-[#d8e0e8]">
-                    <h3 className="text-xl font-medium">Đánh Giá & Nhận Xét</h3>
+                    <h3 className="text-xl font-bold">Đánh Giá & Nhận Xét</h3>
                 </div>
                 <div className="grid 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-1 xs:grid-cols-1 gap-4 py-4 border-b border-[#d8e0e8]">
                     <div className="flex flex-col items-center justify-center">
                         <p className="text-base mb-1">Đánh Giá Trung Bình</p>
-                        <h1 className="text-[44px] text-[#1d48ba] font-medium mb-1">4/5</h1>
+                        <h1 className="text-[44px] text-[#1d48ba] font-bold mb-1">4/5</h1>
                         <div className="flex items-center mb-1">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -94,7 +94,7 @@ function Review() {
                             <div class="w-full bg-gray-200 rounded-full h-2 mr-1 ">
                                 <div class="bg-[#4cb816] h-2 rounded-full" style={{ width: '75%' }}></div>
                             </div>
-                            <span className='text-[#718198]'>3</span>
+                            <span className="text-[#718198]">3</span>
                         </div>
                         <div className="flex items-center mb-1">
                             <span className="mr-1 text-base">5</span>
@@ -113,7 +113,7 @@ function Review() {
                             <div class="w-full bg-gray-200 rounded-full h-2 mr-1 ">
                                 <div class="bg-[#4cb816] h-2 rounded-full" style={{ width: '75%' }}></div>
                             </div>
-                            <span className='text-[#718198]'>3</span>
+                            <span className="text-[#718198]">3</span>
                         </div>
                         <div className="flex items-center mb-1">
                             <span className="mr-1 text-base">5</span>
@@ -132,7 +132,7 @@ function Review() {
                             <div class="w-full bg-gray-200 rounded-full h-2 mr-1 ">
                                 <div class="bg-[#4cb816] h-2 rounded-full" style={{ width: '75%' }}></div>
                             </div>
-                            <span className='text-[#718198]'>3</span>
+                            <span className="text-[#718198]">3</span>
                         </div>
                         <div className="flex items-center mb-1">
                             <span className="mr-1 text-base">5</span>
@@ -151,7 +151,7 @@ function Review() {
                             <div class="w-full bg-gray-200 rounded-full h-2 mr-1 ">
                                 <div class="bg-[#4cb816] h-2 rounded-full" style={{ width: '75%' }}></div>
                             </div>
-                            <span className='text-[#718198]'>3</span>
+                            <span className="text-[#718198]">3</span>
                         </div>
                         <div className="flex items-center mb-1">
                             <span className="mr-1 text-base">5</span>
@@ -170,7 +170,7 @@ function Review() {
                             <div class="w-full bg-gray-200 rounded-full h-2 mr-1 ">
                                 <div class="bg-[#4cb816] h-2 rounded-full" style={{ width: '75%' }}></div>
                             </div>
-                            <span className='text-[#718198]'>3</span>
+                            <span className="text-[#718198]">3</span>
                         </div>
                     </div>
                     <div className="flex flex-col items-center my-auto">
@@ -204,7 +204,7 @@ function Review() {
                                     >
                                         <div className="bg-[#fff] px-4 py-4 rounded-2xl shadow-xl min-w-[400px]">
                                             <div className="flex items-center justify-between py-2 ">
-                                                <h3 className="font-medium text-2xl">Trả Lời "Thủy"</h3>
+                                                <h3 className="font-bold text-2xl">Trả Lời "Thủy"</h3>
                                                 <button onClick={() => setIsOpen(false)}>
                                                     <svg
                                                         xmlns="http://www.w3.org/2000/svg"

@@ -6,9 +6,9 @@ function ConfirmEmail() {
     const [successfullyConfirm, setSuccessfullyConfirm] = useState(false);
 
     return (
-        <div className="py-5">
-            <div className="grid place-content-center text-center border-4 border-sky-200 rounded-3xl sm:m-5 px-5 py-8">
-                <div className="p4-8 px-16">
+        <div className="max-w-[1200px] mx-auto padding-responsive overflow-hidden bg-[#fff]">
+            <div className="grid place-content-center text-center border-4 border-sky-200 rounded-3xl my-4 py-8">
+                <div className="py-8 px-16">
                     <span className="flex justify-center">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -29,10 +29,7 @@ function ConfirmEmail() {
                     <div className="w-full flex justify-center">
                         <div className="w-4/5 h-4 border-t-2"></div>
                     </div>
-                    <p>
-                        Một khi xác nhận thành công, email này xác được liên kết
-                        với tài khoản Long Châu của bạn
-                    </p>
+                    <p>Một khi xác nhận thành công, email này xác được liên kết với tài khoản Long Châu của bạn</p>
                     <p>Hãy kiểm tra email của bạn và nhập mã số xác nhận</p>
                 </div>
                 <div>
@@ -82,26 +79,23 @@ function ConfirmEmail() {
                                 }, 1500);
                             }}
                             placeholder="Nhập mã xác nhận"
-                            className="cursor-pointer outline-0 bg-blue-100 hover:bg-sky-200 ring ring-2 my-8 py-2 px-8 rounded-xl border"
+                            className="cursor-pointer outline-0 bg-blue-100 hover:bg-sky-200 ring-2 my-8 py-2 px-8 rounded-xl border w-6/12"
                         ></input>
                     )}
                 </div>
                 {successfullyConfirm ? (
                     <div className="">
                         <p>Xác nhận thành công</p>
-                        <NavLink
-                            to="/signIn"
-                            className="cursor-pointer text-emerald-500 text-xl"
-                        >
+                        <NavLink to="/signIn" className="cursor-pointer text-emerald-500 text-xl">
                             Quay về trang đăng nhập
                         </NavLink>
                     </div>
                 ) : (
-                    <div>
+                    <div className="px-16">
                         <p>Mã xác nhận này chỉ có giá trị trong 3 phút</p>
                         <p className="my-1">
                             Không nhận được mã ?
-                            <span className="text-blue-900 text-center px-1 font-medium cursor-pointer">
+                            <span className="text-blue-900 text-center px-1 font-bold cursor-pointer">
                                 Gửi lại mã xác nhận
                             </span>
                         </p>

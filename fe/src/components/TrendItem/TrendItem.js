@@ -12,16 +12,9 @@ function TrendItem({
 }) {
     return (
         <NavLink to={to || ''} className={className}>
-            <img
-                src={img}
-                alt="img"
-                // w-[100px] h-[100px]
-                className=" mb-3 px-6  object-cover"
-            />
+            <img src={img} alt="img" className=" mb-3 px-6  object-cover " />
             <p className="text-[#334155] text-base font-bold">{title}</p>
-            <p className="text-[#52637a] text-sm uppercase">
-                {productCount} sản phẩm
-            </p>
+            <p className="text-[#52637a] text-sm uppercase">{productCount} sản phẩm</p>
         </NavLink>
     );
 }
